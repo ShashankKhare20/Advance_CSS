@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cube</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        min-height: 100vh;
+        background-color: #f0f0f0;
+      }
+      .container {
+        perspective: 1000px;
+      }
+      .cube {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        transform-style: preserve-3d;
+        transform: rotateX(20deg) rotateY(30deg);
+      }
+      .face {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: rgba(0, 123, 255, 0.7);
+        border: 1px solid;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .front {
+        transform: translateZ(100px);
+      }
+      .back {
+        transform: rotateY(180deg) translateZ(100px);
+      }
+      .right {
+        transform: rotateY(90deg) translateZ(100px);
+      }
+      .left {
+        transform: rotateY(-90deg) translateZ(100px);
+      }
+      .top {
+        transform: rotateX(90deg) translateZ(100px);
+      }
+      .bottom {
+        transform: rotateX(-90deg) translateZ(100px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cube">
+        <div class="front face">Front</div>
+        <div class="back face">Back</div>
+        <div class="right face">Right</div>
+        <div class="left face">Left</div>
+        <div class="top face">Top</div>
+        <div class="bottom face">Bottom</div>
+      </div>
+    </div>
+  </body>
+</html>

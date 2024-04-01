@@ -1,0 +1,39 @@
+<!-- Purpose of var(): -->
+<!-- 
+Also known as CSS variable.They allow us to store and reuse values throughout our stylesheet, making it easier to maintain consistency and
+make global changes.
+By using variables, we can ensure consistent values for colors, spacing, fonts, and more
+throughout our entire design.
+When we need to make a design change, we can update the variable's value once, and the change will be applied to all instances using that variable. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Var function</title>
+    <style>
+        :root {
+            --maincolor:#00b7ff;
+            --secondarycolor:#6c757d;
+        }
+        button {
+            font-size: 25px;
+            padding: 5px 20px;
+            color: white;
+            border: none;
+        }
+        #primarybtn {
+            background-color: var(--maincolor);
+        }
+        #secondarybtn {
+            background-color: var(--secondarycolor);
+        }
+    </style>
+</head>
+<body>
+    <button id="primarybtn">Primary Button</button>
+    <button id="secondarybtn">Secondary Button</button>
+    
+</body>
+</html>
